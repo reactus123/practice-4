@@ -1,8 +1,9 @@
 import { Grid, GridItem, Text, Todo } from 'components';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const TodoList = () => {
-  const todos = [];
-  const deleteTodo = [];
+  const todos = useSelector(state => state.todos);
+
   return (
     <>
       {todos.length === 0 && (
@@ -16,7 +17,7 @@ export const TodoList = () => {
                 id={todo.id}
                 text={todo.text}
                 counter={index + 1}
-                onClick={deleteTodo}
+              
               />
             </GridItem>
           ))}
