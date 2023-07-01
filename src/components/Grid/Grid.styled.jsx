@@ -12,4 +12,4 @@ export const GridItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
