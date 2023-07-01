@@ -7,7 +7,7 @@ export const App = () => {
       <Header />
       <Section>
         <Container>
-          <SearchForm />
+          < SearchForm />
           <TodoList />
         </Container>
       </Section>
