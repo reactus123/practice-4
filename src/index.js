@@ -6,18 +6,18 @@ import 'modern-normalize';
 import { App } from 'components';
 import { GlobalStyles, theme } from 'styles';
 import { PersistGate } from 'redux-persist/integration/react'
-import { Provider } from 'react';
+import { Provider } from 'react-redux';
 import {persistor, store} from './redux/store'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <PersistGate loading={<p>Loading...</p>} persistor={persistor}>
+        {/* <PersistGate loading={<p>Loading...</p>} persistor={persistor}> */}
+    <ThemeProvider theme={theme}>
                  <Global styles={GlobalStyles} />
                   <App />
-        </PersistGate>
-      </Provider>
     </ThemeProvider>
+        {/* </PersistGate> */}
+      </Provider>
   </React.StrictMode>
 );
