@@ -31,9 +31,5 @@ export const store = configureStore({
     }),
 });
 
-<<<<<<< HEAD
 
 export const persistor = persistStore(store)
-=======
-export const persistor = persistStore(store);
->>>>>>> 53d29fd6a7d39531e0aa1f5c606496ebb5b0874f
